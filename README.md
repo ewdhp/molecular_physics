@@ -8,12 +8,6 @@
 - **Chemistry**: Atomic structure, chemical bonding, stoichiometry
 - **Mathematics**: Calculus, linear algebra, differential equations, Fourier analysis
 - **Quantum Mechanics**: Basic understanding of wavefunctions, operators, eigenvalues
-
-**Recommended Background:**
-- Undergraduate physics or chemistry degree (or equivalent)
-- Familiarity with quantum mechanics fundamentals
-- Basic programming skills (Python recommended for computational examples)
-
 ---
 
 ## 🧬 Learning Path
