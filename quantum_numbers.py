@@ -6,11 +6,83 @@ in atoms, including orbital shapes, energies, and electron configurations.
 
 Topics covered:
 1. Quantum number relationships and constraints
+   Introduction: Quantum numbers are discrete values that describe the quantum
+   state of an electron in an atom. Unlike classical mechanics where particles
+   can have any energy or position, quantum mechanics restricts electrons to
+   specific quantum states characterized by four quantum numbers.
+   
+   Theory: The four quantum numbers arise from solving the Schrödinger equation
+   for the hydrogen atom in spherical coordinates:
+   - Principal quantum number (n): Determines the energy level and average
+     distance from nucleus. From the radial equation: E_n = -13.6 eV/n²
+   - Azimuthal/Angular momentum quantum number (l): Determines orbital shape
+     and angular momentum L = √(l(l+1))ℏ. Arises from angular part of wave equation.
+   - Magnetic quantum number (m_l): Determines orbital orientation in space,
+     specifically the z-component of angular momentum: L_z = m_l·ℏ
+   - Spin quantum number (m_s): Intrinsic angular momentum of electron (±½),
+     discovered through Stern-Gerlach experiment and required by quantum mechanics.
+
 2. Electron configurations for elements
+   Introduction: Electron configuration describes how electrons are distributed
+   among atomic orbitals in an atom's ground state. This distribution follows
+   specific rules that minimize the total energy of the atom.
+   
+   Theory: The Aufbau principle (German: "building up") states electrons fill
+   orbitals in order of increasing energy: 1s → 2s → 2p → 3s → 3p → 4s → 3d...
+   This order follows the (n+l) rule: orbitals with lower (n+l) fill first;
+   if (n+l) is equal, lower n fills first. This arises from electron-electron
+   repulsion and nuclear shielding effects in multi-electron atoms. The Madelung
+   rule explains why 4s fills before 3d despite being in a higher shell.
+
 3. Orbital shapes and visualizations
+   Introduction: Atomic orbitals are three-dimensional regions where electrons
+   are most likely to be found. Each orbital type (s, p, d, f) has a
+   characteristic shape determined by the angular part of the wavefunction.
+   
+   Theory: The complete wavefunction Ψ(r,θ,φ) = R_nl(r)·Y_lm(θ,φ) has two parts:
+   - Radial function R_nl(r): Describes probability vs. distance from nucleus,
+     containing (n-l-1) radial nodes where probability = 0
+   - Angular function Y_lm(θ,φ): Spherical harmonics determining orbital shape,
+     containing l angular nodes (nodal planes or cones)
+   Shape types: s (spherical), p (dumbbell), d (cloverleaf), f (complex multilobes)
+
 4. Energy level diagrams
+   Introduction: Energy levels represent the quantized energies an electron can
+   have in an atom. For hydrogen, energy depends only on n; for multi-electron
+   atoms, both n and l affect energy due to electron-electron interactions.
+   
+   Theory: For hydrogen-like atoms (one electron), Bohr model and Schrödinger
+   equation both give E_n = -Z²·13.6 eV/n², where Z is nuclear charge. The
+   negative energy indicates bound states. As n→∞, E→0 (ionization threshold).
+   In multi-electron atoms, orbital energies follow the order: ns < np < nd < nf
+   for the same n, due to penetration effect (s electrons penetrate closer to
+   nucleus, experiencing less shielding) and electron-electron repulsion.
+
 5. Pauli exclusion principle
+   Introduction: The Pauli Exclusion Principle is a fundamental law of quantum
+   mechanics stating that no two electrons in an atom can have identical quantum
+   numbers. This explains the structure of the periodic table and chemical bonding.
+   
+   Theory: Formulated by Wolfgang Pauli (1925), this principle arises from the
+   antisymmetric nature of fermionic wavefunctions. For fermions (half-integer
+   spin particles like electrons): Ψ(r₁,r₂) = -Ψ(r₂,r₁). If two electrons had
+   identical quantum numbers, they would occupy the same state, making the
+   wavefunction Ψ = -Ψ, thus Ψ = 0 (impossible). Consequence: each orbital
+   (defined by n,l,m_l) holds maximum 2 electrons with opposite spins (m_s=±½).
+
 6. Hund's rule demonstration
+   Introduction: Hund's rules predict ground state electron configurations for
+   atoms, particularly how electrons fill degenerate orbitals (same energy).
+   Critical for understanding magnetic properties and chemical reactivity.
+   
+   Theory: Friedrich Hund's rules (1925) for ground state configurations:
+   Rule 1 (Maximum Multiplicity): Electrons occupy degenerate orbitals singly
+   with parallel spins before pairing. Reason: parallel spins stay farther apart
+   spatially (exchange interaction), reducing electron-electron repulsion energy.
+   Rule 2: For given multiplicity, maximum total orbital angular momentum L.
+   Rule 3: If subshell ≤ half-filled, minimum J; if > half-filled, maximum J.
+   Example: Carbon (2p²) has ↑ ↑ _ configuration (parallel) rather than ↑↓ _ _
+   (antiparallel), giving triplet ground state ³P.
 
 Author: ewdhp
 Date: November 7, 2025
