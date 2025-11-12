@@ -14,8 +14,6 @@
 
 ### **Phase 1: Molecular Structure and Bonding**
 
-**Goal**: Understand how atoms combine to form molecules and the quantum mechanical description of chemical bonds.
-
 #### 1.1 Review of Atomic Structure
 
 - **Quantum numbers** (n, l, m_l, m_s)
