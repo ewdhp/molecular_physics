@@ -100,6 +100,7 @@ except:
         pass  # Use whatever is available
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
+from matplotlib.patches import Rectangle
 from mpl_toolkits.mplot3d import Axes3D
 from scipy.special import sph_harm, genlaguerre, factorial
 from itertools import product
@@ -568,6 +569,7 @@ orbital_sets = [
 ]
 
 y_base = 0.7
+x_start = 0.25
 box_width = 0.08
 box_height = 0.15
 arrow_size = 0.05
@@ -578,12 +580,12 @@ for orbital, num_boxes, electrons in orbital_sets:
             transform=ax6.transAxes, va='center')
     
     # Draw boxes
-    x_start = 0.25
     for i in range(num_boxes):
         x = x_start + i * (box_width + 0.02)
-        rect = plt.Rectangle((x, y_base - box_height/2), box_width, box_height,
+        rect = Rectangle((x, y_base - box_height/2), box_width, box_height,
                             fill=False, edgecolor='black', linewidth=2,
                             transform=ax6.transAxes)
+        ax6.add_patch(rect)
         ax6.add_patch(rect)
     
     # Draw electrons (arrows)
@@ -647,46 +649,36 @@ ax8.set_zlabel('z', fontsize=9)
 ax8.set_title('p Orbital (l=1)\nDumbbell', fontsize=12, fontweight='bold')
 ax8.set_box_aspect([1,1,1])
 
-# Plot 9: Summary and key principles (bottom right)
-ax9 = fig.add_subplot(gs[2, 2])
-ax9.text(0.5, 0.95, 'Key Principles', 
-        ha='center', va='top', fontsize=13, fontweight='bold',
-        transform=ax9.transAxes)
-
-principles = [
-    "1. Pauli Exclusion Principle:",
-    "   No two electrons can have",
-    "   identical quantum numbers",
-    "",
-    "2. Aufbau Principle:",
-    "   Fill lowest energy orbitals first",
-    "   Order: 1s, 2s, 2p, 3s, 3p, 4s...",
-    "",
-    "3. Hund's Rule:",
-    "   Maximize unpaired electrons",
-    "   in degenerate orbitals",
-    "",
-    "4. Quantum Number Rules:",
-    "   • n ≥ 1",
-    "   • 0 ≤ l < n",
-    "   • -l ≤ m_l ≤ l",
-    "   • m_s = ±½"
-]
-
-y_pos = 0.85
-for text in principles:
-    ax9.text(0.05, y_pos, text, ha='left', va='top', fontsize=9,
-            transform=ax9.transAxes, family='monospace')
-    y_pos -= 0.048
-
-ax9.axis('off')
-
 plt.suptitle('Quantum Numbers and Electron States in Atoms', 
             fontsize=16, fontweight='bold', y=0.995)
 
 plt.show(block=True)
 
 print("\n" + "=" * 80)
+print("KEY PRINCIPLES SUMMARY")
+print("=" * 80)
+print()
+print("1. PAULI EXCLUSION PRINCIPLE:")
+print("   • No two electrons can have identical quantum numbers")
+print("   • Each orbital (n, l, m_l) holds maximum 2 electrons with opposite spins")
+print()
+print("2. AUFBAU PRINCIPLE:")
+print("   • Fill lowest energy orbitals first")
+print("   • Order: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d...")
+print("   • Based on (n+l) rule: lower (n+l) fills first")
+print()
+print("3. HUND'S RULE:")
+print("   • Maximize unpaired electrons in degenerate orbitals")
+print("   • Electrons occupy different orbitals with parallel spins before pairing")
+print("   • Minimizes electron-electron repulsion")
+print()
+print("4. QUANTUM NUMBER RULES:")
+print("   • n ≥ 1 (principal quantum number)")
+print("   • 0 ≤ l < n (azimuthal quantum number)")
+print("   • -l ≤ m_l ≤ l (magnetic quantum number)")
+print("   • m_s = ±½ (spin quantum number)")
+print()
+print("=" * 80)
 print("KEY INSIGHTS:")
 print("=" * 80)
 print("• Each electron has a unique set of four quantum numbers (n, l, m_l, m_s)")
@@ -696,3 +688,4 @@ print("• Aufbau principle: electrons fill lowest energy orbitals first")
 print("• Hund's rule: maximize unpaired spins in degenerate orbitals")
 print("• s orbitals are spherical, p orbitals are dumbbell-shaped")
 print("=" * 80)
+
